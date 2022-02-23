@@ -10,4 +10,14 @@ export const Harmony: Chain = {
   getExplorerTransactionLink: (transactionHash: string) => `https://explorer.harmony.one/tx/${transactionHash}`,
 }
 
-export default { Harmony }
+export const HarmonyTestnet: Chain = {
+  chainId: 1666700000,
+  chainName: 'HarmonyTestnet',
+  isTestChain: true,
+  isLocalChain: false,
+  multicallAddress: '0xFE4980f62D708c2A84D3929859Ea226340759320',
+  getExplorerAddressLink: (address: string) => `https://explorer.pops.one/address/${address}`,
+  getExplorerTransactionLink: (transactionHash: string) => `https://explorer.pops.one/tx/${transactionHash}`,
+}
+
+export default { Harmony, HarmonyTestnet }
